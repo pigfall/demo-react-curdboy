@@ -11,13 +11,15 @@ import {
   Td,
   TableCaption,
   TableContainer,
+  VStack,
 } from '@chakra-ui/react'
 
 function Dept(){
   return (
+  <VStack>
       <TableContainer>
         <Table variant='simple'>
-          <TableCaption>Dept</TableCaption>
+          <TableCaption>Dept Fields</TableCaption>
           <Thead>
             <Tr>
               <Th>Field Name</Th>
@@ -35,6 +37,21 @@ function Dept(){
           </Tbody>
         </Table>
       </TableContainer>
+      <TableContainer>
+        <Table variant='simple'>
+          <TableCaption>Dept Edges</TableCaption>
+          <Thead>
+            <Tr>
+              <Th>Edge Name</Th>
+              <Th>Edge Type</Th>
+            </Tr>
+          </Thead>
+          <Tbody>
+            
+          </Tbody>
+        </Table>
+      </TableContainer>
+  </VStack>
   )
 }
 

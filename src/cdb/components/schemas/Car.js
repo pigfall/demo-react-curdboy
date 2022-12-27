@@ -14,12 +14,12 @@ import {
   VStack,
 } from '@chakra-ui/react'
 
-function User(){
+function Car(){
   return (
   <VStack>
       <TableContainer>
         <Table variant='simple'>
-          <TableCaption>User Fields</TableCaption>
+          <TableCaption>Car Fields</TableCaption>
           <Thead>
             <Tr>
               <Th>Field Name</Th>
@@ -34,18 +34,12 @@ function User(){
                 <Td>string</Td>
               </Tr>
             
-              
-              <Tr>
-                <Td>age</Td>
-                <Td>int</Td>
-              </Tr>
-            
           </Tbody>
         </Table>
       </TableContainer>
       <TableContainer>
         <Table variant='simple'>
-          <TableCaption>User Edges</TableCaption>
+          <TableCaption>Car Edges</TableCaption>
           <Thead>
             <Tr>
               <Th>Edge Name</Th>
@@ -56,8 +50,8 @@ function User(){
             
               
               <Tr>
-                <Td>cars</Td>
-                <Td>Car</Td>
+                <Td>owner</Td>
+                <Td>User</Td>
               </Tr>
             
           </Tbody>
@@ -67,4 +61,4 @@ function User(){
   )
 }
 
-export { User }
+export { Car }

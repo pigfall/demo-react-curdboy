@@ -5,6 +5,9 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 
 
   
+  import { Car } from "../components/schemas/Car"
+
+  
   import { Dept } from "../components/schemas/Dept"
 
   
@@ -16,6 +19,8 @@ return (
       <Tabs> 
         <TabList>
           
+            <Tab>Car</Tab>
+          
             <Tab>Dept</Tab>
           
             <Tab>User</Tab>
@@ -23,6 +28,11 @@ return (
         </TabList>
 
         <TabPanels>
+          
+            
+            <TabPanel>
+            <Car/>
+            </TabPanel>
           
             
             <TabPanel>
