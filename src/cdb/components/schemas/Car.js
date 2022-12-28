@@ -42,6 +42,7 @@ function Car(){
           <TableCaption>Car Edges</TableCaption>
           <Thead>
             <Tr>
+              <Th>Relation</Th>
               <Th>Edge Name</Th>
               <Th>Edge Type</Th>
             </Tr>
@@ -50,6 +51,7 @@ function Car(){
             
               
               <Tr>
+                <Td>M2O</Td>
                 <Td>owner</Td>
                 <Td>User</Td>
               </Tr>

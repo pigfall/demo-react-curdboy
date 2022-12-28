@@ -42,6 +42,7 @@ function Dept(){
           <TableCaption>Dept Edges</TableCaption>
           <Thead>
             <Tr>
+              <Th>Relation</Th>
               <Th>Edge Name</Th>
               <Th>Edge Type</Th>
             </Tr>

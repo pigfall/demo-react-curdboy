@@ -48,6 +48,7 @@ function User(){
           <TableCaption>User Edges</TableCaption>
           <Thead>
             <Tr>
+              <Th>Relation</Th>
               <Th>Edge Name</Th>
               <Th>Edge Type</Th>
             </Tr>
@@ -56,6 +57,7 @@ function User(){
             
               
               <Tr>
+                <Td>O2M</Td>
                 <Td>cars</Td>
                 <Td>Car</Td>
               </Tr>
