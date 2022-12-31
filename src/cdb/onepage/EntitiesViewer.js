@@ -1,7 +1,8 @@
 
 
 
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
+import { Tabs, TabList, TabPanels, Tab, TabPanel, Button, Input } from '@chakra-ui/react';
+import {useState} from 'react';
 
   
   import { CarList } from "../components/entities/CarList"
@@ -14,6 +15,7 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
 
 
 function Entities(){
+  const [expandForm, setExpandForm] = useState(false)
   return (
       <Tabs> 
         <TabList>
@@ -46,6 +48,18 @@ function Entities(){
 
         </TabPanels>
       </Tabs>
+  )
+}
+
+function Form({expand}){
+  if (!expand){
+    return null;
+  }
+  return(
+  <>
+    <Input placeholder='name'/>
+    <Button>Submit</Button>
+  </>
   )
 }
 
