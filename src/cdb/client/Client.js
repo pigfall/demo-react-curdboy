@@ -1,7 +1,10 @@
 
 
-class Client {
-  constructor(serverURL) {
+
+import {Config} from "Config";
+
+export class Client {
+  constructor(serverURL=Config.serverURL) {
     this.serverURL = serverURL
   }
 
@@ -30,8 +33,33 @@ class Car {
     this.client = client
   }
 
+  build_url(){
+    var url = new URL(this.client.serverURL)
+    url.pathname = "/"+"Car".toLowerCase()
+    return url
+  }
+
   create(obj){
-    return fetch(new Request(this.client.serverURL,{method:"POST",body:JSON.stringify(obj)}))
+    var url = this.build_url()
+    return fetch(
+      new Request(
+        url,
+        {
+          method:"POST",
+          body:JSON.stringify(obj),
+          mode: 'cors',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+        }
+      )
+    )
+  }
+
+  list(req){
+    var url = this.build_url()
+    url.search = new URLSearchParams(req).toString()
+    return fetch(new Request(url,{method:"GET"}))
   }
 }
 
@@ -41,8 +69,33 @@ class Dept {
     this.client = client
   }
 
+  build_url(){
+    var url = new URL(this.client.serverURL)
+    url.pathname = "/"+"Dept".toLowerCase()
+    return url
+  }
+
   create(obj){
-    return fetch(new Request(this.client.serverURL,{method:"POST",body:JSON.stringify(obj)}))
+    var url = this.build_url()
+    return fetch(
+      new Request(
+        url,
+        {
+          method:"POST",
+          body:JSON.stringify(obj),
+          mode: 'cors',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+        }
+      )
+    )
+  }
+
+  list(req){
+    var url = this.build_url()
+    url.search = new URLSearchParams(req).toString()
+    return fetch(new Request(url,{method:"GET"}))
   }
 }
 
@@ -52,8 +105,33 @@ class User {
     this.client = client
   }
 
+  build_url(){
+    var url = new URL(this.client.serverURL)
+    url.pathname = "/"+"User".toLowerCase()
+    return url
+  }
+
   create(obj){
-    return fetch(new Request(this.client.serverURL,{method:"POST",body:JSON.stringify(obj)}))
+    var url = this.build_url()
+    return fetch(
+      new Request(
+        url,
+        {
+          method:"POST",
+          body:JSON.stringify(obj),
+          mode: 'cors',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+        }
+      )
+    )
+  }
+
+  list(req){
+    var url = this.build_url()
+    url.search = new URLSearchParams(req).toString()
+    return fetch(new Request(url,{method:"GET"}))
   }
 }
 
