@@ -23,6 +23,7 @@ import {
   Box,
   Alert,
   AlertIcon,
+  NumberInput,
 } from '@chakra-ui/react'
 
 import { Field, Form , Formik } from 'formik';
@@ -221,26 +222,34 @@ function AddForm({hidden,refreshList}){
       return (<Form>
 
         
-        
-        <Field name='name' >
-            {({ field, form }) => (
-              <FormControl >
-                <FormLabel>name</FormLabel>
-                <Input {...field} placeholder='name' />
-              </FormControl>
-            )}
-        </Field>
-        
-        
-        <Field name='age' >
-            {({ field, form }) => (
-              <FormControl >
-                <FormLabel>age</FormLabel>
-                <Input {...field} placeholder='age' />
-              </FormControl>
-            )}
-        </Field>
-        
+  
+
+  
+  
+  
+  <Field name='name' >
+      {({ field, form }) => (
+        <FormControl >
+          <FormLabel>name</FormLabel>
+          <Input {...field} placeholder='name' />
+        </FormControl>
+      )}
+  </Field>
+  
+  
+  
+  
+  <Field name='age' >
+      {({ field, form }) => (
+        <FormControl >
+          <FormLabel>age</FormLabel>
+          <Input type='number' {...field} placeholder='age' />
+        </FormControl>
+      )}
+  </Field>
+  
+  
+
 
         <Button
         mt={4}
@@ -258,6 +267,8 @@ function AddForm({hidden,refreshList}){
 </>
   )
 }
+
+
 
 
 
